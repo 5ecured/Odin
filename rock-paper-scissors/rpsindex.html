@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+      function computerPlay() {
+        let array = ['rock', 'paper', 'scissors']
+
+        let answer = array[Math.floor(Math.random() * array.length)];
+        return answer
+      }
+
+      // let playerSelection = 'rock';
+      let computerSelection = computerPlay();
+      let choice = prompt('Rock or paper or scissors?')
+
+      if (choice.toLowerCase() == 'rock' && computerSelection == 'scissors') {
+        console.log(`player wins! because player picked ${choice} and computer picked ${computerSelection}`)
+      } else if (choice.toLowerCase() == 'paper' && computerSelection == 'rock') {
+        console.log(`player also wins! 1 because player picked ${choice} and computer picked ${computerSelection}`)
+      } else if (choice.toLowerCase() == 'scissors' && computerSelection == 'paper') {
+        console.log(`player also wins! 2 because player picked ${choice} and computer picked ${computerSelection}`)
+      } else if (choice.toLowerCase() == computerSelection){
+        console.log(`tie because because player picked ${choice} and computer picked ${computerSelection}`)
+      } else {
+        console.log(`comp wins! because player picked ${choice} and computer picked ${computerSelection}`)
+      }
+
+    </script>
+  </body>
+</html>
